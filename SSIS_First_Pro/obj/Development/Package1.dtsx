@@ -1,0 +1,2682 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="11/2/2018 10:21:15 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="LAPTOP-STDN3CBM"
+  DTS:CreatorName="LAPTOP-STDN3CBM\yashg"
+  DTS:DTSID="{94D23C33-41A5-468E-B0B5-F0DB19EC39A7}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.0900.30"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="13"
+  DTS:VersionGUID="{4F0556DE-F80A-4313-9779-A3A159B00D9D}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{6D85355E-0749-4095-98A8-FC779CFE3887}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="16393"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x0022_"
+          DTS:CodePage="65001"
+          DTS:ConnectionString="G:\Integration\SSIS\SalesDiag\ARAP_SalesDiag_CA_20180909_20180919.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ASIN"
+              DTS:DTSID="{E9D85660-E40F-4D11-8BB7-B4B511A88272}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Parent ASIN"
+              DTS:DTSID="{10710889-A0FE-4783-80EF-0F2B0C388DCC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="EAN"
+              DTS:DTSID="{C98A8ACD-9516-4846-903A-A6D4B08A1F5F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="UPC"
+              DTS:DTSID="{377A7978-18B2-49D3-AA25-EBF4AD128198}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Product Title"
+              DTS:DTSID="{28294416-574C-4663-A2A6-59AAF9271BD0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Brand"
+              DTS:DTSID="{B1C47429-4598-4A8D-A0DB-B420C6B5F14A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Subcategory"
+              DTS:DTSID="{5B39B153-0EF3-439C-8DC0-88E3314C4C99}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{35A199DD-DF67-4DBE-8ABE-91376D6B1AE7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Model   Style Number"
+              DTS:DTSID="{99E221CA-DDC9-4D0F-B7BA-5ED4754442AB}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ordered Revenue"
+              DTS:DTSID="{50C1F885-DED3-4554-A9FC-B0054A9A6FE6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ordered Revenue - % of Total"
+              DTS:DTSID="{68FA67E5-459C-49D3-8186-3D89911AFFDE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ordered Revenue - Prior Period"
+              DTS:DTSID="{CC421BF3-C72E-4381-B1D7-A1770DBD5380}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ordered Revenue - Last Year"
+              DTS:DTSID="{0851CB9C-4A2E-4BE0-AA6D-2B100D9D19AE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ordered Units"
+              DTS:DTSID="{16B9DAF0-89A2-4BB9-AA2F-A23AA3F1D96D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ordered Units - % of Total"
+              DTS:DTSID="{24A5BD9C-9A46-473E-8C7E-E74039CDE655}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ordered Units - Prior Period"
+              DTS:DTSID="{F14999E8-D63C-4E05-AE5E-FD651638446A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Ordered Units - Last Year"
+              DTS:DTSID="{98A8CB32-51F4-4EE7-8813-D16AB89B2ABA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Subcategory (Sales Rank)"
+              DTS:DTSID="{5ECBE30B-89C6-46F3-BCBC-D8A9D98E78D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Subcategory (Better Worse)"
+              DTS:DTSID="{D63AAE2E-742A-444B-B755-9EBF3C9F06D8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Average Sales Price"
+              DTS:DTSID="{44AD178C-EAFE-4EC6-9795-98D5BFE7C702}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Average Sales Price - Prior Period"
+              DTS:DTSID="{C9891D43-5EBD-48E5-9188-40BEDA2BD95D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Change in GV Prior Period"
+              DTS:DTSID="{FA721F23-E8C8-40E4-9184-21B74E02C5D2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Change in GV Last Year"
+              DTS:DTSID="{C12429A7-D4BD-4D36-B1F5-E453E2AEA3FD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Rep OOS"
+              DTS:DTSID="{83449E06-D17E-440A-99D7-A0C49E3A12D1}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Rep OOS - % of Total"
+              DTS:DTSID="{CBB7D181-8AC9-4773-B05F-520ABCEDFF4E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Rep OOS - Prior Period"
+              DTS:DTSID="{BF5848C9-A918-4DDD-AA39-4E16B805F84D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="LBB (Price)"
+              DTS:DTSID="{87936AB8-45FB-42E1-8C53-07066F5FD5EB}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[LAPTOP-STDN3CBM.ExtractLanding 1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F6FD0279-4197-48C0-AC71-7A27CDD6FC8A}"
+      DTS:ObjectName="LAPTOP-STDN3CBM.ExtractLanding 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=LAPTOP-STDN3CBM;Initial Catalog=ExtractLanding;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{3EE97073-20B2-458D-9ED6-C9615F324874}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="filename">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{A56C497C-07E7-4557-A3D3-E127ADBBB29A}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="FilePath">
+      <DTS:VariableValue
+        DTS:DataType="8">G:\Integration\SSIS\SalesDiag</DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\FLC-SalesDiag"
+      DTS:CreationName="STOCK:FOREACHLOOP"
+      DTS:Description="Foreach Loop Container"
+      DTS:DTSID="{5a0d339e-839b-4842-ba55-55cd89ef2d62}"
+      DTS:ExecutableType="STOCK:FOREACHLOOP"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="FLC-SalesDiag">
+      <DTS:ForEachEnumerator
+        DTS:CreationName="Microsoft.ForEachFileEnumerator"
+        DTS:DTSID="{79e0d833-0d11-472d-8141-fbdd5241dca0}"
+        DTS:ObjectName="{53EF4C1B-2681-4E54-951B-16EF0352E8A7}">
+        <DTS:ObjectData>
+          <ForEachFileEnumeratorProperties>
+            <FEFEProperty
+              Folder="G:\Integration\SSIS\SalesDiag" />
+            <FEFEProperty
+              FileSpec="*.csv" />
+            <FEFEProperty
+              FileNameRetrievalType="2" />
+            <FEFEProperty
+              Recurse="0" />
+          </ForEachFileEnumeratorProperties>
+        </DTS:ObjectData>
+      </DTS:ForEachEnumerator>
+      <DTS:Variables />
+      <DTS:Executables>
+        <DTS:Executable
+          DTS:refId="Package\FLC-SalesDiag\Data Flow Task"
+          DTS:CreationName="Microsoft.Pipeline"
+          DTS:Description="Data Flow Task"
+          DTS:DTSID="{8bb2c295-4bd7-45ec-af98-336d654dbfd9}"
+          DTS:ExecutableType="Microsoft.Pipeline"
+          DTS:LocaleID="-1"
+          DTS:ObjectName="Data Flow Task"
+          DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+          <DTS:Variables />
+          <DTS:ObjectData>
+            <pipeline
+              version="1">
+              <components>
+                <component
+                  refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion"
+                  componentClassID="Microsoft.DataConvert"
+                  contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Data Conversion"
+                  name="Data Conversion"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                      name="Data Conversion Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[ASIN]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="ASIN"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ASIN]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Parent ASIN]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Parent ASIN"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Parent ASIN]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[EAN]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="EAN"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[EAN]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[UPC]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="UPC"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[UPC]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Product Title]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Product Title"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Product Title]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Brand]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Brand"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Brand]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Subcategory]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Subcategory"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Subcategory]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Category]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Category"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Category]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Model   Style Number]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Model   Style Number"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Model   Style Number]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Ordered Revenue]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Ordered Revenue"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Revenue]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Ordered Revenue - % of Total]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Ordered Revenue - % of Total"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Revenue - % of Total]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Ordered Revenue - Prior Period]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Ordered Revenue - Prior Period"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Revenue - Prior Period]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Ordered Revenue - Last Year]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Ordered Revenue - Last Year"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Revenue - Last Year]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Ordered Units]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Ordered Units"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Units]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Ordered Units - % of Total]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Ordered Units - % of Total"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Units - % of Total]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Ordered Units - Prior Period]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Ordered Units - Prior Period"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Units - Prior Period]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Ordered Units - Last Year]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Ordered Units - Last Year"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Units - Last Year]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Subcategory (Sales Rank)]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Subcategory (Sales Rank)"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Subcategory (Sales Rank)]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Subcategory (Better Worse)]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Subcategory (Better Worse)"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Subcategory (Better Worse)]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Average Sales Price]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Average Sales Price"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Average Sales Price]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Average Sales Price - Prior Period]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Average Sales Price - Prior Period"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Average Sales Price - Prior Period]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Change in GV Prior Period]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Change in GV Prior Period"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Change in GV Prior Period]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Change in GV Last Year]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Change in GV Last Year"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Change in GV Last Year]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Rep OOS]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Rep OOS"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rep OOS]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Rep OOS - % of Total]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Rep OOS - % of Total"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rep OOS - % of Total]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[Rep OOS - Prior Period]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="Rep OOS - Prior Period"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rep OOS - Prior Period]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input].Columns[LBB (Price)]"
+                          cachedCodepage="65001"
+                          cachedDataType="str"
+                          cachedLength="50"
+                          cachedName="LBB (Price)"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[LBB (Price)]" />
+                      </inputColumns>
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]"
+                      exclusionGroup="1"
+                      name="Data Conversion Output"
+                      synchronousInputId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ASIN]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ASIN]"
+                          name="ASIN"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ASIN]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Parent ASIN]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Parent ASIN]"
+                          name="Parent ASIN"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Parent ASIN]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[EAN]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[EAN]"
+                          name="EAN"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[EAN]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[UPC]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[UPC]"
+                          name="UPC"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[UPC]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Product Title]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="500"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Product Title]"
+                          name="Product Title"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Product Title]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Brand]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Brand]"
+                          name="Brand"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Brand]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Subcategory]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Subcategory]"
+                          name="Subcategory"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Subcategory]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Category]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="500"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Category]"
+                          name="Category"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Category]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Model   Style Number]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="500"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Model   Style Number]"
+                          name="Model   Style Number"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Model   Style Number]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Revenue]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Revenue]"
+                          name="Ordered Revenue"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Revenue]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Revenue - % of Total]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Revenue - % of Total]"
+                          name="Ordered Revenue - % of Total"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Revenue - % of Total]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Revenue - Prior Period]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Revenue - Prior Period]"
+                          name="Ordered Revenue - Prior Period"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Revenue - Prior Period]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Revenue - Last Year]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Revenue - Last Year]"
+                          name="Ordered Revenue - Last Year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Revenue - Last Year]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Units]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Units]"
+                          name="Ordered Units"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Units]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Units - % of Total]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Units - % of Total]"
+                          name="Ordered Units - % of Total"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Units - % of Total]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Units - Prior Period]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Units - Prior Period]"
+                          name="Ordered Units - Prior Period"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Units - Prior Period]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Units - Last Year]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Units - Last Year]"
+                          name="Ordered Units - Last Year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Units - Last Year]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Subcategory (Sales Rank)]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Subcategory (Sales Rank)]"
+                          name="Subcategory (Sales Rank)"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Subcategory (Sales Rank)]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Subcategory (Better Worse)]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Subcategory (Better Worse)]"
+                          name="Subcategory (Better Worse)"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Subcategory (Better Worse)]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Average Sales Price]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Average Sales Price]"
+                          name="Average Sales Price"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Average Sales Price]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Average Sales Price - Prior Period]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Average Sales Price - Prior Period]"
+                          name="Average Sales Price - Prior Period"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Average Sales Price - Prior Period]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Change in GV Prior Period]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Change in GV Prior Period]"
+                          name="Change in GV Prior Period"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Change in GV Prior Period]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Change in GV Last Year]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Change in GV Last Year]"
+                          name="Change in GV Last Year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Change in GV Last Year]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Rep OOS]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Rep OOS]"
+                          name="Rep OOS"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rep OOS]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Rep OOS - % of Total]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Rep OOS - % of Total]"
+                          name="Rep OOS - % of Total"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rep OOS - % of Total]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Rep OOS - Prior Period]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Rep OOS - Prior Period]"
+                          name="Rep OOS - Prior Period"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rep OOS - Prior Period]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[LBB (Price)]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          length="250"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[LBB (Price)]"
+                          name="LBB (Price)"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.Int32"
+                              description="Specifies the input column used as the source of data for the conversion."
+                              name="SourceInputColumnLineageID">#{Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[LBB (Price)]}</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Data Conversion Error Output"
+                      synchronousInputId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\FLC-SalesDiag\Data Flow Task\Derived Column"
+                  componentClassID="Microsoft.DerivedColumn"
+                  contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+                  description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+                  name="Derived Column"
+                  usesDispositions="true">
+                  <inputs>
+                    <input
+                      refId="Package\FLC-SalesDiag\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                      description="Input to the Derived Column Transformation"
+                      name="Derived Column Input">
+                      <externalMetadataColumns />
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\FLC-SalesDiag\Data Flow Task\Derived Column.Outputs[Derived Column Output]"
+                      description="Default Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      name="Derived Column Output"
+                      synchronousInputId="Package\FLC-SalesDiag\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Date]"
+                          dataType="wstr"
+                          errorOrTruncationOperation="Computation"
+                          errorRowDisposition="FailComponent"
+                          length="10"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Date]"
+                          name="Date"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Expression"
+                              name="Expression">[SUBSTRING]([SUBSTRING]((DT_WSTR,50)@[User::filename],28,35),1,4) + "-" + [SUBSTRING]([SUBSTRING]((DT_WSTR,50)@[User::filename],28,35),5,2) + "-" + [SUBSTRING]([SUBSTRING]((DT_WSTR,50)@[User::filename],28,35),7,2)</property>
+                            <property
+                              containsID="true"
+                              dataType="System.String"
+                              description="Derived Column Friendly Expression"
+                              expressionType="Notify"
+                              name="FriendlyExpression">SUBSTRING(SUBSTRING((DT_WSTR,50)@[User::filename],28,35),1,4) + "-" + SUBSTRING(SUBSTRING((DT_WSTR,50)@[User::filename],28,35),5,2) + "-" + SUBSTRING(SUBSTRING((DT_WSTR,50)@[User::filename],28,35),7,2)</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                    <output
+                      refId="Package\FLC-SalesDiag\Data Flow Task\Derived Column.Outputs[Derived Column Error Output]"
+                      description="Error Output of the Derived Column Transformation"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="Derived Column Error Output"
+                      synchronousInputId="Package\FLC-SalesDiag\Data Flow Task\Derived Column.Inputs[Derived Column Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source"
+                  componentClassID="Microsoft.FlatFileSource"
+                  contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+                  description="Flat File Source"
+                  localeId="16393"
+                  name="Flat File Source"
+                  usesDispositions="true"
+                  version="1">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      description="Specifies whether zero-length columns are treated as null."
+                      name="RetainNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                      name="FileNameColumnName"></property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Connections[FlatFileConnection]"
+                      connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                      connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                      name="FlatFileConnection" />
+                  </connections>
+                  <outputs>
+                    <output
+                      refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]"
+                      name="Flat File Source Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ASIN]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ASIN]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[ASIN]"
+                          name="ASIN"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Parent ASIN]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Parent ASIN]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Parent ASIN]"
+                          name="Parent ASIN"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[EAN]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[EAN]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[EAN]"
+                          name="EAN"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[UPC]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UPC]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[UPC]"
+                          name="UPC"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Product Title]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product Title]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Product Title]"
+                          name="Product Title"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Brand]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Brand]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Brand]"
+                          name="Brand"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Subcategory]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Subcategory]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Subcategory]"
+                          name="Subcategory"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                          name="Category"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Model   Style Number]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Model   Style Number]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Model   Style Number]"
+                          name="Model   Style Number"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Revenue]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ordered Revenue]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Revenue]"
+                          name="Ordered Revenue"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Revenue - % of Total]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ordered Revenue - % of Total]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Revenue - % of Total]"
+                          name="Ordered Revenue - % of Total"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Revenue - Prior Period]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ordered Revenue - Prior Period]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Revenue - Prior Period]"
+                          name="Ordered Revenue - Prior Period"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Revenue - Last Year]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ordered Revenue - Last Year]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Revenue - Last Year]"
+                          name="Ordered Revenue - Last Year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Units]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ordered Units]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Units]"
+                          name="Ordered Units"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Units - % of Total]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ordered Units - % of Total]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Units - % of Total]"
+                          name="Ordered Units - % of Total"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Units - Prior Period]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ordered Units - Prior Period]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Units - Prior Period]"
+                          name="Ordered Units - Prior Period"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Units - Last Year]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ordered Units - Last Year]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Ordered Units - Last Year]"
+                          name="Ordered Units - Last Year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Subcategory (Sales Rank)]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Subcategory (Sales Rank)]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Subcategory (Sales Rank)]"
+                          name="Subcategory (Sales Rank)"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Subcategory (Better Worse)]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Subcategory (Better Worse)]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Subcategory (Better Worse)]"
+                          name="Subcategory (Better Worse)"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Average Sales Price]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Average Sales Price]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Average Sales Price]"
+                          name="Average Sales Price"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Average Sales Price - Prior Period]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Average Sales Price - Prior Period]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Average Sales Price - Prior Period]"
+                          name="Average Sales Price - Prior Period"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Change in GV Prior Period]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Change in GV Prior Period]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Change in GV Prior Period]"
+                          name="Change in GV Prior Period"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Change in GV Last Year]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Change in GV Last Year]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Change in GV Last Year]"
+                          name="Change in GV Last Year"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rep OOS]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Rep OOS]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rep OOS]"
+                          name="Rep OOS"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rep OOS - % of Total]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Rep OOS - % of Total]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rep OOS - % of Total]"
+                          name="Rep OOS - % of Total"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rep OOS - Prior Period]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Rep OOS - Prior Period]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[Rep OOS - Prior Period]"
+                          name="Rep OOS - Prior Period"
+                          truncationRowDisposition="FailComponent">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[LBB (Price)]"
+                          codePage="65001"
+                          dataType="str"
+                          errorOrTruncationOperation="Conversion"
+                          errorRowDisposition="FailComponent"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LBB (Price)]"
+                          length="50"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].Columns[LBB (Price)]"
+                          name="LBB (Price)"
+                          truncationRowDisposition="IgnoreFailure">
+                          <properties>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                              name="FastParse">false</property>
+                            <property
+                              dataType="System.Boolean"
+                              description="Indicates whether the data is in binary format."
+                              name="UseBinaryFormat">false</property>
+                          </properties>
+                        </outputColumn>
+                      </outputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ASIN]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="ASIN" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Parent ASIN]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Parent ASIN" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[EAN]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="EAN" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[UPC]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="UPC" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Product Title]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Product Title" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Brand]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Brand" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Subcategory]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Subcategory" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Model   Style Number]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Model   Style Number" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ordered Revenue]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Ordered Revenue" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ordered Revenue - % of Total]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Ordered Revenue - % of Total" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ordered Revenue - Prior Period]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Ordered Revenue - Prior Period" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ordered Revenue - Last Year]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Ordered Revenue - Last Year" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ordered Units]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Ordered Units" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ordered Units - % of Total]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Ordered Units - % of Total" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ordered Units - Prior Period]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Ordered Units - Prior Period" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Ordered Units - Last Year]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Ordered Units - Last Year" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Subcategory (Sales Rank)]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Subcategory (Sales Rank)" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Subcategory (Better Worse)]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Subcategory (Better Worse)" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Average Sales Price]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Average Sales Price" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Average Sales Price - Prior Period]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Average Sales Price - Prior Period" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Change in GV Prior Period]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Change in GV Prior Period" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Change in GV Last Year]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Change in GV Last Year" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Rep OOS]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Rep OOS" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Rep OOS - % of Total]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Rep OOS - % of Total" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Rep OOS - Prior Period]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="Rep OOS - Prior Period" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[LBB (Price)]"
+                          codePage="65001"
+                          dataType="str"
+                          length="50"
+                          name="LBB (Price)" />
+                      </externalMetadataColumns>
+                    </output>
+                    <output
+                      refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output]"
+                      isErrorOut="true"
+                      name="Flat File Source Error Output">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          codePage="1252"
+                          dataType="text"
+                          description="Flat File Source Error Output Column"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                          name="Flat File Source Error Output Column" />
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+                <component
+                  refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination"
+                  componentClassID="Microsoft.OLEDBDestination"
+                  contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+                  description="OLE DB Destination"
+                  name="OLE DB Destination"
+                  usesDispositions="true"
+                  version="4">
+                  <properties>
+                    <property
+                      dataType="System.Int32"
+                      description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                      name="CommandTimeout">0</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the name of the database object used to open a rowset."
+                      name="OpenRowset">[SalesDiag]</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies the variable that contains the name of the database object used to open a rowset."
+                      name="OpenRowsetVariable"></property>
+                    <property
+                      dataType="System.String"
+                      description="The SQL command to be executed."
+                      name="SqlCommand"
+                      UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"></property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the column code page to use when code page information is unavailable from the data source."
+                      name="DefaultCodePage">1252</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Forces the use of the DefaultCodePage property value when describing character data."
+                      name="AlwaysUseDefaultCodePage">false</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the mode used to access the database."
+                      name="AccessMode"
+                      typeConverter="AccessMode">3</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepIdentity">false</property>
+                    <property
+                      dataType="System.Boolean"
+                      description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                      name="FastLoadKeepNulls">false</property>
+                    <property
+                      dataType="System.String"
+                      description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                      name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                      name="FastLoadMaxInsertCommitSize">2147483647</property>
+                  </properties>
+                  <connections>
+                    <connection
+                      refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Connections[OleDbConnection]"
+                      connectionManagerID="Package.ConnectionManagers[LAPTOP-STDN3CBM.ExtractLanding 1]"
+                      connectionManagerRefId="Package.ConnectionManagers[LAPTOP-STDN3CBM.ExtractLanding 1]"
+                      description="The OLE DB runtime connection used to access the database."
+                      name="OleDbConnection" />
+                  </connections>
+                  <inputs>
+                    <input
+                      refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                      errorOrTruncationOperation="Insert"
+                      errorRowDisposition="FailComponent"
+                      hasSideEffects="true"
+                      name="OLE DB Destination Input">
+                      <inputColumns>
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ASIN]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="ASIN"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ASIN]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[ASIN]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Parent ASIN]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Parent ASIN"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Parent ASIN]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Parent ASIN]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[EAN]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="EAN"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EAN]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[EAN]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[UPC]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="UPC"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPC]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[UPC]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Product Title]"
+                          cachedDataType="wstr"
+                          cachedLength="500"
+                          cachedName="Product Title"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Product Title]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Product Title]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Brand]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Brand"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Brand]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Brand]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Subcategory]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Subcategory"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Subcategory]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Subcategory]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Category]"
+                          cachedDataType="wstr"
+                          cachedLength="500"
+                          cachedName="Category"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Category]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Model   Style Number]"
+                          cachedDataType="wstr"
+                          cachedLength="500"
+                          cachedName="Model   Style Number"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Model   Style Number]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Model   Style Number]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Ordered Revenue]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Ordered Revenue"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ordered Revenue]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Revenue]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Ordered Revenue - % of Total]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Ordered Revenue - % of Total"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ordered Revenue - % of Total]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Revenue - % of Total]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Ordered Revenue - Prior Period]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Ordered Revenue - Prior Period"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ordered Revenue - Prior Period]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Revenue - Prior Period]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Ordered Revenue - Last Year]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Ordered Revenue - Last Year"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ordered Revenue - Last Year]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Revenue - Last Year]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Ordered Units]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Ordered Units"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ordered Units]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Units]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Ordered Units - % of Total]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Ordered Units - % of Total"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ordered Units - % of Total]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Units - % of Total]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Ordered Units - Prior Period]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Ordered Units - Prior Period"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ordered Units - Prior Period]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Units - Prior Period]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Ordered Units - Last Year]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Ordered Units - Last Year"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ordered Units - Last Year]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Ordered Units - Last Year]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Subcategory (Sales Rank)]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Subcategory (Sales Rank)"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Subcategory (Sales Rank)]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Subcategory (Sales Rank)]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Subcategory (Better Worse)]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Subcategory (Better Worse)"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Subcategory (Better Worse)]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Subcategory (Better Worse)]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Average Sales Price]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Average Sales Price"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Average Sales Price]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Average Sales Price]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Average Sales Price - Prior Period]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Average Sales Price - Prior Period"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Average Sales Price - Prior Period]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Average Sales Price - Prior Period]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Change in GV Prior Period]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Change in GV Prior Period"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Change in GV Prior Period]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Change in GV Prior Period]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Change in GV Last Year]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Change in GV Last Year"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Change in GV Last Year]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Change in GV Last Year]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Rep OOS]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Rep OOS"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rep OOS]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Rep OOS]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Rep OOS - % of Total]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Rep OOS - % of Total"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rep OOS - % of Total]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Rep OOS - % of Total]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Rep OOS - Prior Period]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="Rep OOS - Prior Period"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rep OOS - Prior Period]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[Rep OOS - Prior Period]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[LBB (Price)]"
+                          cachedDataType="wstr"
+                          cachedLength="250"
+                          cachedName="LBB (Price)"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LBB (Price)]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output].Columns[LBB (Price)]" />
+                        <inputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Date]"
+                          cachedDataType="wstr"
+                          cachedLength="10"
+                          cachedName="Date"
+                          externalMetadataColumnId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\Derived Column.Outputs[Derived Column Output].Columns[Date]" />
+                      </inputColumns>
+                      <externalMetadataColumns
+                        isUsed="True">
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ASIN]"
+                          dataType="wstr"
+                          length="250"
+                          name="ASIN" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Parent ASIN]"
+                          dataType="wstr"
+                          length="250"
+                          name="Parent ASIN" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[EAN]"
+                          dataType="wstr"
+                          length="250"
+                          name="EAN" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[UPC]"
+                          dataType="wstr"
+                          length="250"
+                          name="UPC" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Product Title]"
+                          dataType="wstr"
+                          length="500"
+                          name="Product Title" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Brand]"
+                          dataType="wstr"
+                          length="250"
+                          name="Brand" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Subcategory]"
+                          dataType="wstr"
+                          length="250"
+                          name="Subcategory" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                          dataType="wstr"
+                          length="500"
+                          name="Category" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Model   Style Number]"
+                          dataType="wstr"
+                          length="500"
+                          name="Model   Style Number" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ordered Revenue]"
+                          dataType="wstr"
+                          length="250"
+                          name="Ordered Revenue" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ordered Revenue - % of Total]"
+                          dataType="wstr"
+                          length="250"
+                          name="Ordered Revenue - % of Total" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ordered Revenue - Prior Period]"
+                          dataType="wstr"
+                          length="250"
+                          name="Ordered Revenue - Prior Period" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ordered Revenue - Last Year]"
+                          dataType="wstr"
+                          length="250"
+                          name="Ordered Revenue - Last Year" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ordered Units]"
+                          dataType="wstr"
+                          length="250"
+                          name="Ordered Units" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ordered Units - % of Total]"
+                          dataType="wstr"
+                          length="250"
+                          name="Ordered Units - % of Total" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ordered Units - Prior Period]"
+                          dataType="wstr"
+                          length="250"
+                          name="Ordered Units - Prior Period" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Ordered Units - Last Year]"
+                          dataType="wstr"
+                          length="250"
+                          name="Ordered Units - Last Year" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Subcategory (Sales Rank)]"
+                          dataType="wstr"
+                          length="250"
+                          name="Subcategory (Sales Rank)" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Subcategory (Better Worse)]"
+                          dataType="wstr"
+                          length="250"
+                          name="Subcategory (Better Worse)" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Average Sales Price]"
+                          dataType="wstr"
+                          length="250"
+                          name="Average Sales Price" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Average Sales Price - Prior Period]"
+                          dataType="wstr"
+                          length="250"
+                          name="Average Sales Price - Prior Period" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Change in GV Prior Period]"
+                          dataType="wstr"
+                          length="250"
+                          name="Change in GV Prior Period" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Change in GV Last Year]"
+                          dataType="wstr"
+                          length="250"
+                          name="Change in GV Last Year" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rep OOS]"
+                          dataType="wstr"
+                          length="250"
+                          name="Rep OOS" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rep OOS - % of Total]"
+                          dataType="wstr"
+                          length="250"
+                          name="Rep OOS - % of Total" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Rep OOS - Prior Period]"
+                          dataType="wstr"
+                          length="250"
+                          name="Rep OOS - Prior Period" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[LBB (Price)]"
+                          dataType="wstr"
+                          length="250"
+                          name="LBB (Price)" />
+                        <externalMetadataColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                          dataType="wstr"
+                          length="10"
+                          name="Date" />
+                      </externalMetadataColumns>
+                    </input>
+                  </inputs>
+                  <outputs>
+                    <output
+                      refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                      exclusionGroup="1"
+                      isErrorOut="true"
+                      name="OLE DB Destination Error Output"
+                      synchronousInputId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                      <outputColumns>
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          dataType="i4"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                          name="ErrorCode"
+                          specialFlags="1" />
+                        <outputColumn
+                          refId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          dataType="i4"
+                          lineageId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                          name="ErrorColumn"
+                          specialFlags="2" />
+                      </outputColumns>
+                      <externalMetadataColumns />
+                    </output>
+                  </outputs>
+                </component>
+              </components>
+              <paths>
+                <path
+                  refId="Package\FLC-SalesDiag\Data Flow Task.Paths[Data Conversion Output]"
+                  endId="Package\FLC-SalesDiag\Data Flow Task\Derived Column.Inputs[Derived Column Input]"
+                  name="Data Conversion Output"
+                  startId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Outputs[Data Conversion Output]" />
+                <path
+                  refId="Package\FLC-SalesDiag\Data Flow Task.Paths[Derived Column Output]"
+                  endId="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  name="Derived Column Output"
+                  startId="Package\FLC-SalesDiag\Data Flow Task\Derived Column.Outputs[Derived Column Output]" />
+                <path
+                  refId="Package\FLC-SalesDiag\Data Flow Task.Paths[Flat File Source Output]"
+                  endId="Package\FLC-SalesDiag\Data Flow Task\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Flat File Source Output"
+                  startId="Package\FLC-SalesDiag\Data Flow Task\Flat File Source.Outputs[Flat File Source Output]" />
+              </paths>
+            </pipeline>
+          </DTS:ObjectData>
+        </DTS:Executable>
+      </DTS:Executables>
+      <DTS:ForEachVariableMappings>
+        <DTS:ForEachVariableMapping
+          DTS:CreationName=""
+          DTS:DTSID="{47B4D78F-9A99-41D1-B9B2-45A985AAF4BB}"
+          DTS:ObjectName="{47B4D78F-9A99-41D1-B9B2-45A985AAF4BB}"
+          DTS:ValueIndex="0"
+          DTS:VariableName="User::filename" />
+      </DTS:ForEachVariableMappings>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="151,42"
+          Id="Package\FLC-SalesDiag\Data Flow Task"
+          TopLeft="58,29" />
+        <ContainerLayout
+          HeaderHeight="43"
+          IsExpanded="True"
+          PanelSize="263,125"
+          Size="263,168"
+          Id="Package\FLC-SalesDiag"
+          TopLeft="58,60" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\FLC-SalesDiag\Data Flow Task">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination"
+          TopLeft="258,237" />
+        <NodeLayout
+          Size="151,42"
+          Id="Package\FLC-SalesDiag\Data Flow Task\Flat File Source"
+          TopLeft="91,19" />
+        <NodeLayout
+          Size="156,42"
+          Id="Package\FLC-SalesDiag\Data Flow Task\Data Conversion"
+          TopLeft="89,93" />
+        <EdgeLayout
+          Id="Package\FLC-SalesDiag\Data Flow Task.Paths[Flat File Source Output]"
+          TopLeft="166.75,61">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,32"
+              Start="0,0"
+              End="0,24.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,24.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="154,42"
+          Id="Package\FLC-SalesDiag\Data Flow Task\Derived Column"
+          TopLeft="135,164" />
+        <EdgeLayout
+          Id="Package\FLC-SalesDiag\Data Flow Task.Paths[Data Conversion Output]"
+          TopLeft="167,135">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="45,29"
+              Start="0,0"
+              End="45,21.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.5"
+                    Point2="0,14.5"
+                    Point3="4,14.5" />
+                  <mssgle:LineSegment
+                    End="41,14.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="41,14.5"
+                    Point2="45,14.5"
+                    Point3="45,18.5" />
+                  <mssgle:LineSegment
+                    End="45,21.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\FLC-SalesDiag\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="212,206">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="131.5,31"
+              Start="0,0"
+              End="131.5,23.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,11.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,11.5"
+                    Point2="0,15.5"
+                    Point3="4,15.5" />
+                  <mssgle:LineSegment
+                    End="127.5,15.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="127.5,15.5"
+                    Point2="131.5,15.5"
+                    Point3="131.5,19.5" />
+                  <mssgle:LineSegment
+                    End="131.5,23.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\FLC-SalesDiag\Data Flow Task\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
